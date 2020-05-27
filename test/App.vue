@@ -1,15 +1,18 @@
 <template>
   <div id="app">
     <BggButton />
+    <BggAlert />
   </div>
 </template>
 
 <script>
 import BggButton from '../packages/button/src/index.vue'
+import BggAlert from '../packages/alert/src/index.vue'
 export default {
   name: 'App',
   components: {
-    BggButton
+    BggButton,
+    BggAlert
   }
 }
 </script>

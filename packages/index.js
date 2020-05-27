@@ -1,25 +1,29 @@
 import version from '../version.js'
-import BggButton from './button/index.js'
+import Button from './button/index.js'
+import Alert from './alert/index.js'
 
 // 组件列表
 const components = [
-  BggButton
+  Alert,
+  Button
 ]
 
-const install = Vue => {
+const install = function (Vue) {
   components.forEach(component => {
-    Vue.use(component.name, component)
+    console.log('install - func', component)
+    Vue.component(component.name, component)
   })
 }
-
-// 判断是否引入vue
-if (typeof window !== 'undefined' && window.Vue) {
+// 判断是否是直接引入的 vue
+if (window && window.Vue) {
   install(Vue)
 }
 
-export default {
+const bingogo = {
+  version,
   // 必须要有install 才能被vue.use()安装
   install,
-  BggButton,
-  version
+  Alert,
+  Button,
 }
+export default bingogo
