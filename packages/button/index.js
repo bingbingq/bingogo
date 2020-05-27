@@ -1,4 +1,4 @@
-import BggButton from './Button'
+import BggButton from './src/index.vue'
 BggButton.install = Vue => {
   Vue.component(BggButton.name, BggButton)
 }

@@ -2,9 +2,21 @@
 test/
 packages/
 public/
+dist/index.html
+dist/favicon.ico
+lib/demo.html
 
 # 忽略指定文件
 vue.config.js
 babel.config.js
 *.map
 .editorconfig.js
+version.js
+
+# Editor 需要忽略的文件
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

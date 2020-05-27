@@ -1,4 +1,5 @@
-import BggButton from './Button/index.vue'
+import version from '../version.js'
+import BggButton from './button/index.js'
 
 // 组件列表
 const components = [
@@ -16,7 +17,9 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(Vue)
 }
 
-// 导出的对象必须具有 install 方法才能被vue.use()
 export default {
-  BggButton
+  // 必须要有install 才能被vue.use()安装
+  install,
+  BggButton,
+  version
 }

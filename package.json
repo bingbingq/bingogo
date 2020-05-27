@@ -1,10 +1,13 @@
 {
   "name": "bingogo",
-  "version": "0.0.2",
+  "version": "0.0.9",
+  "author": "blingbing <381119117@qq.com>",
   "private": false,
+  "license": "MIT",
+  "main": "lib/bingogo.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name bingogo --dest lib packages/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

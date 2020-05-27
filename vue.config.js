@@ -8,15 +8,16 @@ module.exports = {
     }
   },
   lintOnSave: false,
-  configureWebpack: {
-    output: {
-      path: path.resolve(__dirname, './dist'),
-      filename: 'bingogo.min.js',
-      library: 'bingogo',
-      libraryTarget: 'umd',
-      umdNamedDefine: true
-    }
-  },
+  // configureWebpack: {
+  //   output: {
+  //     path: path.resolve(__dirname, './dist'),
+  //     filename: 'bingogo.min.js',
+  //     publicPath: '/',
+  //     library: 'bingogo',
+  //     libraryTarget: 'umd',
+  //     umdNamedDefine: true
+  //   }
+  // },
   chainWebpack: config => {
     config.module
       .rule('js')

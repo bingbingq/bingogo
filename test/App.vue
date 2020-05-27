@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import BggButton from '../packages/Button/index.vue'
+import BggButton from '../packages/button/src/index.vue'
 export default {
   name: 'App',
   components: {
