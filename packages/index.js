@@ -2,6 +2,7 @@ import version from '../version.js'
 import Button from './button/index.js'
 import Alert from './alert/index.js'
 
+import './fonts/font.scss'
 // 组件列表
 const components = [
   Alert,
@@ -10,7 +11,6 @@ const components = [
 
 const install = function (Vue) {
   components.forEach(component => {
-    console.log('install - func', component)
     Vue.component(component.name, component)
   })
 }

@@ -6,8 +6,9 @@
     ]"
     @click="handleClick"
   >
+    <i :class="icon"></i>
     <span>
-      按钮0.0.7
+      按钮
 	    <slot></slot>
 	  </span>
   </button>
@@ -20,6 +21,26 @@
       type: {
         type: String,
         default: 'default'
+      },
+      plain: {
+        type: Boolean,
+        default: false
+      },
+      round: {
+        type: Boolean,
+        default: false
+      },
+      cycle: {
+        type: Boolean,
+        default: false
+      },
+      disabled: {
+        type: Boolean,
+        default: false
+      },
+      icon: {
+        type: String,
+        default: 'bgg-icon-time'
       }
     },
     methods: {
@@ -31,24 +52,30 @@
 </script>
 
 <style type="text/scss" lang="scss" scoped>
+  @import "../../theme-chalk/common/variable";
   .bgg-button {
     box-sizing: border-box;
+    white-space: nowrap;
     outline: none;
     margin: 0;
     transition: 0.1s;
     font-weight: 500;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+    padding: 0 20px;
+    line-height: 32px;
+    font-size: $--font-size-btn;
+    border-radius: $--border-radius-btn;
+    -webkit-appearance: none;
+    border: 0;
     &.bgg-button--default {
-      background: #2c3e50;
-      color: #fff;
-      border: none;
+      color: $--color-white;
+      background: $--color-primary;
+      border-color: $--color-primary;
       &:active {
-        background: #4b504d;
+        background: $--color-primary;
       }
       &:hover {
-        background: #add1ff;
+        background: $--color-primary-hover;
+        border-color: $--color-primary-hover;
       }
     }
   }

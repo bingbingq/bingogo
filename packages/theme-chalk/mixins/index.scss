@@ -1,0 +1,22 @@
+@import "../common/variable";
+@mixin btn-plain($color) {
+  background: $color;
+  &:hover,
+  &:focus {
+    background: $color;
+    border-color: $color;
+    color: $--color-white;
+  }
+  &:active {
+    color: mix($--color-black, $color, 90%);
+    background-color: mix($--color-black, $color, 90%);
+  }
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: mix($--color-white, $color, 40%);
+    }
+  }
+}
