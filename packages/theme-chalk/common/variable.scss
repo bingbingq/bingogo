@@ -1,14 +1,18 @@
-/** button-colors **/
+// button colors
 $--color-primary: #409EFF;
 $--color-white: #ffffff;
 $--color-black: #000000;
-/** button-color || hover **/
+$--color-plain: #333333;
+$--font-color-plain: #606266;
+$--border-color-plain: #dcdfe6;
+// button-color || hover
 $--color-primary-hover: mix($--color-white, $--color-primary, 20%);
 
-/** button-size **/
+// button size
 $--font-size-btn: 14px;
 
-/** button-style **/
-
+// button radius
 $--border-radius-btn: 2px;
+$--border-radius-cycle: 50%;
+$--border-radius-round: 12px;
 

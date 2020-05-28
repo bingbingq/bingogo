@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <BggButton />
+    <BggButton disabled/>
     <BggAlert />
   </div>
 </template>
